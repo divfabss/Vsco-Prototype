@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #d1cfcf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.profile {
+  margin: 30px 0 20px 0;
+  width: 150px; /* Ajusta el ancho según tus necesidades */
+  height: 150px; /* Ajusta la altura según tus necesidades */
+  overflow: hidden; /* Asegura que la imagen se recorte para ajustarse al recorte circular */
+  border-radius: 50%; /* Esto redondeará el contenedor para que la máscara de recorte sea circular */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Agrega una sombra circular */
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+  clip-path: circle(50%); /* Aplicamos la máscara de recorte circular */
+}
+
+.profileUser {
+  margin: 2px 0 20px 0;
+  text-align: center;
+  text-decoration: underline;
+}
+#button {
+  color: #ecf0f1;
+  font-size: 17px;
+  background-color: #504f4f;
+  border: 1px solid #504f4f;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 6px 0px #000000;
+  transition: all .1s;
+}
+   
+#button:active {
+  box-shadow: 0px 2px 0px #000000;
+  position: relative;
+  top: 2px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.container img {
+  object-fit: cover;
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: rebeccapurple;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+  
+.btn:focus {
+    outline: none;
+}
+  
+.btn:active {
+    transform: scale(0.98);
+}
+  
+#toasts {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+  
+.toast {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+}
+  
+.toast.info {
+    color: rebeccapurple;
+}
+  
+.toast.success {
+    color: green; /* Cambio a verde para mensajes de éxito */
+}
+  
+.toast.error {
+    color: red; /* Cambio a rojo para mensajes de error */
+}
+.footer{
+  background-color: #504f4f;
+  padding: 1rem 5rem 1rem 5rem;
+  color: #fff;
+}
+.footer a{
+  background-color: #504f4f;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .footer{
+      padding: 1rem;
+  }
+}
